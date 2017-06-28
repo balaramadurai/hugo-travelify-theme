@@ -1,0 +1,32 @@
+<nav id="main-nav" class="clearfix">
+  <div class="container clearfix">
+    <ul class="root">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main.ByWeight }}
+      <li class="menu-item menu-item-type-post_type menu-item-object-page {{if $currentPage.HasMenuCurrent "main" . }} active{{end}}">
+	<a href="{{ .URL }}">{{ .Name }}</a>
+	{{ if .HasChildren }}
+	<ul class="sub-menu">
+	  {{ range .Children }}
+	  <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children">
+	    <a href="{{ .URL }}">{{ .Name }}
+	    </a>
+	    {{ if .HasChildren }}
+	    <ul class="sub-menu">
+	      {{ range .Children }}
+	      <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+		<a href="{{ .URL }}">{{ .Name }}
+		</a>
+	      </li>
+	      {{ end }}
+	    </ul>
+	    {{ end }}
+	  </li>
+	  {{ end }}
+	</ul>
+	{{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </div><!-- .container -->
+</nav><!-- #main-nav -->

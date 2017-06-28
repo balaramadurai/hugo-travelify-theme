@@ -1,0 +1,83 @@
+## baseURL = "http://nikimonikado.gitlab.io/hugo-travelify-theme/"
+title = "Travelify"
+subtitle = "Travel theme for Hugo with Slider"
+languageCode = "en-us"
+# preservetaxonomynames = true
+theme = "hugo-travelify-theme"
+DisqusShortname = "nikimonikado"
+GoogleAnalytics = "UA-68204765-1"
+canonifyURLs = true
+rssURI = "feed/"
+    
+[params]
+    # Tell me who you are
+
+    site_description = "Travel theme for Hugo with Slider"
+    copyright  = "Copyright"
+    avatar = "css/images/avatar.png"
+    logo = "css/images/logo.png"
+    disable_mathjax = false # set to true to disable MathJax
+
+    # Format dates with Go's time formatting
+    date_format = "January 02, 2006"
+
+    # Add custom assets with their paths relative to the static folder
+    custom_css = []
+    custom_js  = []
+
+# Create custom menu entries by defining a label and a link for
+# them. Since you can also link posts, you've the option the
+# place the links before or after them.
+#
+# E.g.: "Home" appears before all linked posts in the menu
+# and "Tags" / "Categories" after them.
+
+
+[[menu.main]]
+    name  = "About"
+    url   = "/about/"
+    weight = 10
+    
+[[menu.main]]
+    name  = "Contact"
+    url   = "/contact/"
+    weight = 20
+
+
+   
+[social]
+# Add your social network accounts to the profile section on the left
+# by entering your username. The links to your account will be
+# created automatically.
+    github          = "nikimonikado"
+    flickr          = "nikimonikado"
+    instagram       = "nikimonikado"
+    youtube         = "nikimonikado"
+    vimeo           = "nikimonikado"
+    tumblr          = "nikimonikado"
+    linkedin        = "nikimonikado"
+    pinterest       = "nikimonikado"
+    googleplus      = "nikimonikado"
+    facebook        = "nikimonikado"
+    twitter         = "nikimonikado"
+
+# Enable and disable widgets for the right sidebar
+[params.widgets]
+    recent_articles = true
+    categories = true
+    tags = true
+    tag_cloud = true
+    archives = false # This feature is yet to be implemented because of limitations in Hugo's way of working.
+    search = true
+
+[params.slider]
+    enable = true
+    num_features = 6 # The slider picks up the banner images from the N most recent posts, where num_features is N.
+
+## DONE - Menu
+## DONE - slider 
+## DONE - facebook like on homepage
+## DONE - category URL to work
+## DONE - footer
+## DONE - add tags to the footer
+## TODO - some posts without banner

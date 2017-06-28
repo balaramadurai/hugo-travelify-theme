@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  {{ partial "header" . }}
+  <body class="home blog logged-in admin-bar no-customize-support custom-background ">
+    <div class="wrapper">
+      <header id="branding" >
+	{{ partial "head" . }}
+	{{ partial "nav" . }}
+	<div class="page-title-wrap">
+	    		<div class="container clearfix">
+	    							   <h3 class="page-title">{{ if not .IsHome }}{{ .Title }} {{ end }}</h3><!-- .page-title -->
+				</div>
+	    	</div>
+	
+      </header>
+      <div id="main" class="container clearfix">
+	<div id="container">
+	  <div id="primary" class="no-margin-left">
+	    <div id="content">
+	      <section class="post type-post status-publish format-standard has-post-thumbnail hentry ">
+		{{ $paginator := .Paginate .Data.Pages }}
+		{{ range $paginator.Pages }}
+		{{ .Render "summary" }} 
+		{{ end }}
+	      </section>
+	      {{ partial "pagination" . }}
+	    </div>
+	  </div><!-- #content -->
+	</div><!-- #primary -->
+	<div id="secondary">
+	  {{ partial "widgets/search" . }}
+	  {{ partial "widgets/categories" . }}
+	  {{ partial "widgets/archive" . }}
+	  {{ partial "widgets/tag_cloud" . }}
+	</div><!-- #secondary -->
+      </div><!-- #container -->   
+    </div><!-- #main -->
+    {{ partial "footer.html" . }}
+  </body>
+</html>

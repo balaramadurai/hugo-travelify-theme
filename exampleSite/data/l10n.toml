@@ -1,0 +1,54 @@
+[articles]
+    read_more = "Read More"
+    words = "words"
+    readingtime = "minute read"
+    share = "Share this:"
+    comments = "Comments"
+
+# Linked older/newer posts at the bottom of each one
+[articles.linked_posts]
+    older = "←"
+    newer = "→"
+
+[search]
+    placeholder = "Search"
+
+[pagination]
+    previous = "Previous"
+    next = "Next"
+
+[profile]
+    follow_button = "Like Us"
+    tags = "Tags"
+    posts = "Posts"
+
+[page_not_found]
+    title = "Error 404 - Page NOT Found"
+    subtitle = "The content you're looking for doesn't seem to exist."
+
+[social]
+    facebook = "Follow us on Facebook"
+    twitter = "Follow us on Twitter"
+    RSS = "Subscribe to our feed"
+    googleplus = "Follow us on Google Plus"
+    pinterest = "Follow us on Pinterest"
+    linkedin = "Follow us on LinkedIn"
+    tumblr = "Follow us on Tumblr"
+    vimeo = "Follow us on Vimeo"
+    instagram = "Follow us on Instagram"
+    flickr = "Follow us on Flickr"
+    youtube = "Follow us on YouTube"
+    github = "Follow us on GitHub"
+
+[widgets.categories]
+    title = "Categories"
+
+[widgets.recent_articles]
+    title = "Recents"
+
+[widgets.tag_cloud]
+    title = "Tag cloud"
+    min_count = 2  # If you have many posts, then tag with just one topic makes the tag cloud cluttered. This variable can help reduce the clutter.
+
+[widgets.tags]
+    title = "Tags"

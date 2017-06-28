@@ -1,0 +1,30 @@
+<section id="main" class="post type-post status-publish format-standard has-post-thumbnail hentry">
+  <article>
+    {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
+    <figure class="post-featured-image">
+      <a href="{{ .RelPermalink }}" itemprop="url">
+	<img src="{{ .Params.banner | absURL }}" class="attachment-featured size-featured wp-post-image"/>
+      </a>
+    </figure> 
+    {{ end }}
+    
+    {{ partial "article_header" . }}
+    <div class="article-entry entry-content clearfix" itemprop="articleBody">
+      <p>
+        {{ printf "%s" .Summary | markdownify }}
+        <br>
+      </p>
+    </div>
+
+    {{ partial "article_footer" . }}
+      <span>
+    <a class="readmore" href="{{ .Permalink }}">
+      {{with .Site.Data.l10n.articles.read_more}}{{.}}{{end}}
+    </a>
+  </span>
+  
+</div>
+
+
+  </article>
+</section>

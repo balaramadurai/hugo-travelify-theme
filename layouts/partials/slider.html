@@ -1,0 +1,33 @@
+{{ if isset .Site.Params "slider" }}
+{{ if .Site.Params.slider.enable }}
+
+<section class="featured-slider">
+  <div class="slider-cycle">
+    {{ range $index, $page := first .Site.Params.slider.num_features (where .Site.Pages "Type" "post") }}
+    {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
+    <div class="slides {{ if eq $index 0 }} displayblock {{ else }} displaynone {{ end }}">
+      <figure>
+	<a href="{{ .Permalink }}" title="{{ .Title }}">
+	  <img src="{{ .Params.banner }}" class="pngfix wp-post-image" alt="{{ .Title }}" title="{{ .Title }}">
+	</a>
+      </figure>
+      <article class="featured-text">
+	<div class="featured-title">
+	  <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+	</div><!-- .featured-title -->
+	<div class="featured-content">{{ printf "%s" .Summary | markdownify }}
+	</div><!-- .featured-content -->
+      </article><!-- .featured-text -->
+    </div><!-- .slides -->
+    {{ end }}
+    {{ end }}
+  </div>
+  <nav id="controllers" class="clearfix">
+  </nav>
+  <!-- #controllers -->
+</section><!-- .featured-slider -->		
+{{ end }}
+{{ end }}
+
+
+

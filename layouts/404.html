@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  {{ partial "header" . }}
+  <body class="home blog logged-in admin-bar no-customize-support custom-background ">
+    <div class="wrapper">
+      <header id="branding" >
+	{{ partial "head" . }}
+	{{ partial "nav" . }}
+      </header>
+      <div id="main" class="container clearfix">
+	<div id="container">
+	  <div id="primary" class="no-margin-left">
+	    <div id="content">
+	      <header class="entry-header">
+		<h1 class="entry-title">
+                  {{with .Site.Data.l10n.page_not_found.title}}{{.}}{{end}}
+		</h1>
+	      </header>
+	      <div class="entry-content clearfix">
+		<p>{{with .Site.Data.l10n.page_not_found.subtitle}}{{.}}{{end}}</p>
+		<h3>This might be because:</h3>
+		<ul>
+		  <li>You have typed the web address incorrectly</li>
+		  <li>The page you were looking for may have been moved, updated or deleted.</li>
+		</ul>
+		<h3>Please try the following:</h3>
+		<ul>
+		  <li>Check for a mis-typed URL error</li>
+		  <li>Press the refresh button on your browser.</li>
+		  <li>Go back to <a href="/" title="{{ .Site.Title }}" rel="home">Homepage</a></li>
+		</ul>
+	      </div>
+	    </div>
+	  </div><!-- #content -->
+	</div><!-- #primary -->
+	<div id="secondary">
+	  {{ partial "widgets/search" . }}
+	  {{ partial "widgets/categories" . }}
+	  {{ partial "widgets/archive" . }}
+	  {{ partial "widgets/tag_cloud" . }}
+	</div><!-- #secondary -->
+      </div><!-- #container -->   
+    </div><!-- #main -->
+    {{ partial "footer.html" . }}
+  </body>
+</html>

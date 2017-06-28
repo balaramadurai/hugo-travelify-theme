@@ -1,0 +1,50 @@
+<footer id="footerarea" class="clearfix">
+  <div class="widget-wrap">
+    <div class="container">
+      <div class="widget-area clearfix">
+      </div><!-- .widget-area -->
+    </div><!-- .container -->
+  </div><!-- .widget-wrap -->
+  
+  <div id="site-generator">
+    <div class="container">
+      <div class="copyright">&copy; {{now.Format "2006"}}
+      {{ with .Site.Params.copyright }}{{ . | markdownify}}{{ end }} Powered by <a href="http://gohugo.io">Hugo</a>. Original theme by <a href="http://colorlib.com/wp/travelify/">Colorlib</a> adapted for Hugo by <a href="http://balaramadurai.net">Dr. Bala Ramadurai</a>.</div><!-- .copyright --><div class="footer-right"></div><div style="clear:both;">
+      </div>
+    </div><!-- .container -->
+  </div><!-- #site-generator -->
+  <div class="back-to-top">
+    <a href="#branding"></a>
+  </div>
+</footer>
+</div><!-- .wrapper -->
+
+<script type='text/javascript' src="{{ .Site.BaseURL }}js/admin-bar.min.js"></script>
+<script type='text/javascript' src="{{ .Site.BaseURL }}js/jquery.cycle.all.min.js"></script>
+<script type='text/javascript'>
+  /* <![CDATA[ */
+var travelify_slider_value = {"transition_effect":"fade","transition_delay":"4000","transition_duration":"1000"};
+/* ]]> */
+</script>
+<script type='text/javascript' src="{{ .Site.BaseURL }}js/slider-settings.min.js"></script>
+<script type='text/javascript' src="{{ .Site.BaseURL }}js/wp-embed.min.js"></script>
+<!--[if lte IE 8]>
+    <script type="text/javascript">
+      document.body.className = document.body.className.replace( /(^|\s)(no-)?customize-support(?=\s|$)/, '' ) + ' no-customize-support';
+    </script>
+    <![endif]-->
+<!--[if gte IE 9]><!-->
+    <script type="text/javascript">
+      (function() {
+      var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+      
+						request = true;
+      
+      b[c] = b[c].replace( rcs, ' ' );
+      // The customizer requires postMessage and CORS (if the site is cross domain)
+      b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+      }());
+		</script>
+    <!--<![endif]-->
+
+    {{ partial "footer_js" . }}

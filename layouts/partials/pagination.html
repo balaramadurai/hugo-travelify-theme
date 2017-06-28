@@ -1,0 +1,18 @@
+<ul class="default-wp-page clearfix">
+  {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+    {{ if .Paginator.HasPrev }}
+  <li class="previous">
+    <a class="extend prev" rel="prev" href="{{ .Paginator.Prev.URL | absURL }}">
+            « {{ with .Site.Data.l10n.pagination.previous }}{{ . }}{{ end }}
+    </a>
+  </li>	  
+  {{ end }}
+  {{ if .Paginator.HasNext }}
+  <li class="next">
+    <a class="extend next" rel="next" href="{{ .Paginator.Next.URL | absURL }}">
+       {{ with .Site.Data.l10n.pagination.next }}{{ . }}{{ end }} »
+    </a>
+  </li>   
+  {{ end }}
+  {{ end }}
+</ul>

@@ -1,0 +1,17 @@
+{{ if isset .Site.Params.widgets "search" }}
+{{ if .Site.Params.widgets.search }}
+<aside id="search-3" class="widget widget_search">
+  <form method="get" action="https://duckduckgo.com/">
+    <input type="search" name="q" maxlength="255" placeholder="Search the site">
+    <input type="hidden" name="sites" value="{{ .Site.BaseURL }}"/>
+    <input type="hidden" name="k7" value="#faf8f8"/>
+    <input type="hidden" name="kj" value="#b33"/>
+    <input type="hidden" name="ky" value="#fafafa"/>
+    <input type="hidden" name="kx" value="b"/>
+    <input type="hidden" name="ko" value="-1"/>
+    <input type="hidden" name="k1" value="-1"/>
+    <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" />
+  </form>
+</aside>
+{{ end }}
+{{ end }}

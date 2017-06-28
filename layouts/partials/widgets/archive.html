@@ -1,0 +1,17 @@
+{{ if .Site.Params.widgets.archives }}
+<aside id="archives-3" class="widget widget_archive">
+  <h3 class="widget-title">Archives</h3>
+  <label class="screen-reader-text" for="archives-dropdown-3">Archives</label>
+
+  <select id="archives-dropdown-3" name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+    <option value="">Select Month</option>
+    {{ range .Site.Pages.GroupByDate "01 2006" }}
+    {{ $split := split .Key " " }}
+    {{ $month := index $split 0 }}
+    {{ $year := int (index $split 1) }}
+    {{ $url := printf "%s/%s/" (index $split 1) (index $split 0) }}
+    <option value="{{ $url | relURL }}">{{ index $.Site.Data.months $month }} {{ index $split 1 }}</option>
+    {{ end }}
+  </select>
+</aside>
+{{ end }}

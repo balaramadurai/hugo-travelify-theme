@@ -1,0 +1,40 @@
+{{ if not .Params.meta_disable }}
+<div class="entry-meta-bar clearfix">
+  <div class="entry-meta">
+    {{ if isset .Params "author" }}
+    <span class="byline">
+      <span class="author vcard">
+        {{ $url := printf "author/%s" (.Params.author | urlize | lower) }}
+        <a class="url fn n" href="{{ $url | absURL }}">{{ .Params.author | lower }}</a>
+      </span>
+    </span>
+    {{ end }}
+
+    {{ if not .Params.nodateline }}
+    <span class="posted-on">
+      <time class="entry-date published" datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
+    </span>
+    {{ end }}
+    
+    {{ if isset .Params "categories" }}
+    {{ $categoriesLen := len .Params.categories }}
+    {{ if gt $categoriesLen 0 }}
+    <span class="category">
+      {{ range $k, $v := .Params.categories }}
+      {{ $url := printf "%s/%s" "categories" (. | urlize | lower) }}
+      <a class="article-category-link" href="{{ $url | absURL }}">{{ . }}</a>
+      {{ if lt $k (sub $categoriesLen 1) }},{{ end }}
+      {{ end }}
+    </span>
+    {{ end }}
+    {{ end }}
+    {{ if and (not (eq .Site.DisqusShortname "")) (not .Params.disable_comments) }}
+    <span class="comments">
+      <a href="{{ .Permalink }}#disqus_thread">{{with .Site.Data.l10n.articles.comments}}{{.}}{{end}}
+      </a>
+    </span>
+    {{ end }}
+  </div>
+  {{ else }}
+
+{{ end }}

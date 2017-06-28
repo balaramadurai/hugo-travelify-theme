@@ -1,0 +1,34 @@
+{{ if .Params.disable_profile | and .Params.disable_widgets }}
+<section id="main" class="full-width">
+{{ else }}
+<section id="post" class="post type-post status-publish format-standard has-post-thumbnail hentry">
+{{ end }}
+    <article>
+        <div class="article-inner">
+          {{ partial "article_header" . }}
+	  {{ partial "article_footer" . }}
+	  {{ partial "share" . }}
+	  </div>
+          <div class="entry-content" itemprop="articleBody">
+            {{ .Content }}
+	    {{ partial "share" . }}
+          </div>
+	  {{ if (.Params.tags) }}
+	  <div class="tags">
+            {{ range $k, $tag := .Params.tags }}
+	    <a href="/tags/{{ $tag | urlize }}" rel="tag">{{ $tag }}</a>&middot;
+	    {{ end }}
+	  </div>
+	  {{ end }}
+        </div>
+        {{ partial "prev_next_post" . }}
+    </article>
+
+    {{ if and (not (eq .Site.DisqusShortname "")) (not .Params.disable_comments) }}
+    <section id="comments">
+        <div id="disqus_thread">
+            {{ template "_internal/disqus.html" . }}
+        </div>
+    </section>
+    {{ end }}
+</section>
