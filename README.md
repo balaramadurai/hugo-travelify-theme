@@ -1,40 +1,66 @@
-# Hugo-Travelify-Theme
+**Hugo-Travelify-Theme** is the Hugo version of the Wordpress theme - Travelify . The source code was adapted from *digitalcraftsman*'s Icarus theme with a few changes for additional features (Even this README is a fork from his original theme README :)).
 
-Hugo-Travelify-Theme is the Hugo versin of the Wordpress theme - Travelfy . The source code was adapted from digitalcraftssman's ICarus theme with a few changes for additional features.
+<!--more-->
 
-Some basic features are: automatic slider generation with banner images, i10n data changes, disqus integration, mailchimp subscription, social media share
+Some of the important features of Hugo-Travelify-Theme are: 
 
-![](https://raw.githubusercontent.com/digitalcraftsman/hugo-icarus-theme/master/images/screenshot.png)
+- Automatic slider generation with banner images
+
+- i10n data
+
+- Disqus integration
+
+- Social media share
+
+- Google Analytics
+
+  ![](https://raw.githubusercontent.com/balaramadurai/hugo-travelify-theme/master/images/screenshot-1.png)
+
+
+
+![](https://raw.githubusercontent.com/balaramadurai/hugo-travelify-theme/master/images/screenshot-2.png)
+
+![](https://raw.githubusercontent.com/balaramadurai/hugo-travelify-theme/master/images/screenshot-3.png)
 
 ## Get the theme
 
-I assume you've Git installed. Inside the folder of your Hugo site run
+If you have `git` installed, you can do the following at the command-line-interface at the Hugo directory/folder:
 
     $ cd themes
-    $ git clone https://github.com/digitalcraftsman/hugo-icarus-theme.git
+    $ git clone https://github.com/balaramadurai/hugo-travelify-theme.git
 
-You should see a folder called `hugo-icarus-theme` inside the `themes` directory that we created a few moments ago. For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
+You should see a folder called `hugo-travelify-theme` inside the `themes` directory that we created a few moments ago. For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
 
 
 ## Setup
 
-In the next step navigate to the `exampleSite` folder at `themes/hugo-icarus-theme/exampleSite/`. Its structure should look similar to this:
+In the next step navigate to the `exampleSite` folder at `themes/hugo-travelify-theme/exampleSite/`. Its structure should look similar to this:
 
     exampleSite
-    ├── config.toml
-    ├── content
-    │   └── post
-    │       ├── creating-a-new-theme.md
-    │       ├── go-is-for-lovers.md
-    │       ├── hugo-is-for-lovers.md
-    │       ├── introducing-icarus-and-its-features.md
-    │       ├── linked-post.md
-    │       └── migrate-from-jekyll.md
-    ├── data
-    │   └── l10n.toml
-    └── static
-        └── banners
-            └── placeholder.png
+    |   config.toml
+    +---content
+    |   |   about.md
+    |   |   contact.md
+    |   \---post
+    |           creating-a-new-theme.md
+    |           go-is-for-lovers.md
+    |           hugo-is-for-lovers.md
+    |           linked-post.md
+    |           migrate-from-jekyll.md
+    |           this-post-has-no-body.md
+    +---data
+    |       l10n.toml
+    \---static
+        |   new-york-featured.jpg
+        \---banners
+                7148951717_9bbf185db3_h-1018x460.jpg
+                featured-4.jpg
+                featured-5.jpg
+                new-york-featured.jpg
+                placeholder.png
+                Spain-Plaza-de-Cibeles-Madrid-1018x460.jpg
+                Spain-Plaza-de-Cibeles-Madrid-670x300.jpg
+                spain6-1018x460.jpg
 
 In order to get your site running, you need to copy `config.toml` and `data/l10n.toml` into the root folders.
 
@@ -43,6 +69,23 @@ In order to get your site running, you need to copy `config.toml` and `data/l10n
 
 Now, let us take a look into the `config.toml`. Feel free to play around with the settings.
 
+### Automatic Slider
+
+The slider can be switched on and off at will and you can customize the number of banner images you want on the carousel using the parameters in the config.
+
+```
+[params.slider]
+enable = true
+num_features = 4 # The slider picks up the banner images from the N most recent posts, where num_features is N.
+```
+
+*Tip* - For best results in the slider, use **1018x460** resolution for the banner images
+
+### Google Analytics
+
+```
+GoogleAnalytics = ""
+```
 
 ### Comments
 
@@ -69,10 +112,10 @@ You can also define the items menu entries as you like. First, let us link a pos
 
 Furthermore, we can add entries that don't link to posts. Back in the `config.toml` you'll find a section for the menus:
 
-    [[params.menu]]
-        before = true
-        label  = "Home"
-        link   = "/"
+    [[menu.main]]
+        name  = "Contact"
+        url   = "/contact/"
+        weight = 20
 
 Define a label and enter the URL to resource you want to link. With `before` you can decide whether the link should appear before **or** after all linked posts in the menu. Therefore, `Home` appears before the linked post.
 
@@ -88,7 +131,6 @@ disable_widgets = true
 +++
 ```
 
-
 ### Tell me who you are
 
 This theme also provides a profile section on the left. Add your social network accounts to the profile section on the left by entering your username under `social`. The links to your account will be create automatically.
@@ -102,22 +144,26 @@ Beside the profile section you can add widgets on the right sidebar. The followi
 - category list
 - tag list
 - tag cloud
+- Duckduckgo search enabled on your website
 
 You can deactivate them under `params.widgets`:
 
+    # Enable and disable widgets for the right sidebar
     [params.widgets]
-        recent_articles = false
+        recent_articles = true
         categories = true
         tags = true
         tag_cloud = true
+        archives = false # This feature is yet to be implemented because of limitations in Hugo's way of working.
+        search = true
 
 ### Date line
 
-The date line includes: post date, # of words, approximate reading, time tags and categories. However, if you want certain pages to omit the date line, simply put `nodateline = true` in the front matter for that page.
+The date line includes: post date, categories, comments and sharing links. However, if you want certain pages to omit the date line, simply put `nodateline = true` in the front matter for that page.
 
-### Disable Previous / next article links
+### Disable Previous / next article links and remove tags
 
-To disable the inclusion of a previous/next article link at the bottom of the page, add `noprevnext = true` to the front matter. This feature, along with `nodateline` can be used to create standalone pages that are less "blog-like"
+To disable the inclusion of a previous/next article link at the bottom of the page, add `noprevnext = true` to the front matter.  Along with this feature, along with `nodateline = true` can be used to create standalone pages that are less "blog-like".
 
 ## Localization (l10n)
 
@@ -129,8 +175,9 @@ You don't blog in English and you want to translate the theme into your native l
 After creating a new post you can define a banner by entering the relative path to the image.
 
     banner = "banners/placeholder.png"
-
 This way you can store them either next to the content file or in the `static` folder.
+
+*Tip* - For best results in the slider, use **1018x460** resolution for the banner images
 
 
 ## Mathematical equations
@@ -176,17 +223,15 @@ Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your b
 
 ## Contributing
 
-Have you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](//github.com/digitalcraftsman/hugo-icarus-theme/issues) to let me know. Or make directly a [pull request](//github.com/digitalcraftsman/hugo-icarus-theme/pulls).
-
+Have you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](//github.com/balaramadurai/hugo-travelify-theme/issues) to let me know. Or make directly a [pull request](//github.com/digitalcraftsman/hugo-travelify-theme/pulls).
 
 ## License
 
-This theme is released under the MIT license. For more information read the [license](https://github.com/digitalcraftsman/hugo-icarus-theme/blob/master/LICENSE.md).
-
+This theme is released under the MIT license. For more information read the [license](https://github.com/balaramadurai/hugo-travelify-theme/blob/master/LICENSE.md).
 
 ## Acknowledgements
 
 Thanks to 
 
-- [Ruipeng Zhang](https://github.com/ppoffice) for creating this theme
+- [Aigars Silkalns](//colorlib.com/travelify/) for creating this theme
 - [Steve Francia](//github.com/spf13) for creating Hugo and the awesome community around the project
