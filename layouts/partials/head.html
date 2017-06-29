@@ -1,7 +1,7 @@
-{{ if .Site.Data.l10n.social }}
+
 <div class="container clearfix">
   <div class="hgroup-wrap clearfix">
-
+{{ if .Site.Data.l10n.social }}
     <section class="hgroup-right">
       <div class="social-icons clearfix">
 	<ul>
@@ -66,6 +66,7 @@
 	</ul>
       </div><!-- .social-icons -->
     </section><!-- .hgroup-right -->
+    {{ end }}
     
     <hgroup id="site-logo" class="clearfix">
       <h1 id="site-title">
@@ -78,4 +79,4 @@
     
   </div><!-- .hgroup-wrap -->
 </div><!-- .container -->
-{{ end }}
+

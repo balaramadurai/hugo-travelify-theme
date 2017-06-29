@@ -1,5 +1,8 @@
+{{ $min_count := 1 }}
 {{ if .Site.Params.widgets.tag_cloud }}
+{{ if not .Site.Data.l10n.widgets.tag_cloud.min_count }}
 {{ $min_count := .Site.Data.l10n.widgets.tag_cloud.min_count }}
+{{ end }}
 {{ $mag_factor :=  mul ($min_count) 6 }}
 <aside id="tag_cloud-2" class="widget widget_tag_cloud">
   <h3 class="widget-title">        {{with .Site.Data.l10n.widgets.tag_cloud.title}}{{.}}{{end}}</h3>

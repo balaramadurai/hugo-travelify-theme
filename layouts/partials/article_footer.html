@@ -1,18 +1,22 @@
 {{ if not .Params.meta_disable }}
+    {{ $date_format := "January 02, 2006" }}
 <div class="entry-meta-bar clearfix">
   <div class="entry-meta">
     {{ if isset .Params "author" }}
     <span class="byline">
       <span class="author vcard">
         {{ $url := printf "author/%s" (.Params.author | urlize | lower) }}
-        <a class="url fn n" href="{{ $url | absURL }}">{{ .Params.author | lower }}</a>
+ <!-- I'll enable this someday when I learn more about taxonomies in Hugo :) - Bala       <a class="url fn n" href="{{ $url | absURL }}">-->{{ .Params.author | lower }}<!--</a> -->
       </span>
     </span>
     {{ end }}
 
     {{ if not .Params.nodateline }}
+    {{ if not .Site.Params.date_format }}
+    {{ $date_format := .Site.Params.date_format }}
+    {{ end }}
     <span class="posted-on">
-      <time class="entry-date published" datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
+      <time class="entry-date published" datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format $date_format }}</time>
     </span>
     {{ end }}
     

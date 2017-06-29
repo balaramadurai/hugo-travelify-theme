@@ -9,18 +9,20 @@
       </header>
       <div id="main" class="container clearfix">
 	<div id="container">
-	  <div id="primary" class="no-margin-left">
+	  <div {{ if .Site.Params.widgets }}id="primary"{{ end }} class="no-margin-left">
 	    <div id="content">
 	      {{ partial "single_article" . }}
 	    </div>
 	  </div><!-- #content -->
 	</div><!-- #primary -->
+	{{ if not .Params.widgets }}
 	<div id="secondary">
 	  {{ partial "widgets/search" . }}
 	  {{ partial "widgets/categories" . }}
 	  {{ partial "widgets/archive" . }}
 	  {{ partial "widgets/tag_cloud" . }}
 	</div><!-- #secondary -->
+	{{ end }}
       </div><!-- #container -->   
     </div><!-- #main -->
     {{ partial "footer.html" . }}

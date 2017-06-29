@@ -1,0 +1,8 @@
+{{ if not .Params.widgets }}
+<div id="secondary">
+  {{ partial "widgets/search" . }}
+  {{ partial "widgets/categories" . }}
+  {{ partial "widgets/archive" . }}
+  {{ partial "widgets/tag_cloud" . }}
+</div><!-- #secondary -->
+{{ end }}

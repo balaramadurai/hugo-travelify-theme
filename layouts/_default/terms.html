@@ -9,7 +9,7 @@
       </header>
       <div id="main" class="container clearfix">
 	<div id="container">
-	  <div id="primary" class="no-margin-left">
+	  <div {{ if .Site.Params.widgets }}id="primary"{{ end }} class="no-margin-left">
 	    <div id="content">
               <ul class="category-list">
                 {{ $data := .Data }} {{ range $key, $value := .Data.Terms.ByCount }}
@@ -22,12 +22,7 @@
 	    </div>
 	  </div><!-- #content -->
 	</div><!-- #primary -->
-	<div id="secondary">
-	  {{ partial "widgets/search" . }}
-	  {{ partial "widgets/categories" . }}
-	  {{ partial "widgets/archive" . }}
-	  {{ partial "widgets/tag_cloud" . }}
-	</div><!-- #secondary -->
+	{{ partial "widgets" . }}
       </div><!-- #container -->   
     </div><!-- #main -->
     {{ partial "footer.html" . }}
