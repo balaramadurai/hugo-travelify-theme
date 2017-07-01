@@ -190,38 +190,6 @@ This way you can store them either next to the content file or in the `static` f
 *Tip* - For best results in the slider, use **1018x460** resolution for the banner images
 
 
-## Mathematical equations
-
-Mathematical equations in form of LaTeX or MathML code can be rendered with the support of [MathJax](https://www.mathjax.org). MathML works out of the box. If you're using LaTeX you need to wrap your equation with `$$`.
-
-You can also print formulas inline. In this case wrap the formula only once with `$`.
-
-If you don't need equations, you can disable MathJax but putting `disable_mathjax = true` in your config.toml. This will prevent clients from unnecessarily downloading the MathJax library.
-
-## Shortcodes
-
-Last but not least I included some useful [shortcodes](http://gohugo.io/extras/shortcodes/) to make your life easier.
-
-### Gallery
-
-This way you can include a gallery into your post. Copy the code below into your content file and enter the relative paths to your images.
-
-    {{< gallery
-        "/banners/placeholder.png"
-        "/banners/placeholder.png"
-        "/banners/placeholder.png"
-    >}}
-
-### JSFiddle
-
-It works the same with JSFiddle examples you want to showcase. The parameter `id` consists of the username and id of the example.
-
-    {{< jsfiddle id="zalun/NmudS" >}}
-
-As descibed in the [docs of JSFiddle](http://doc.jsfiddle.net/use/embedding.html), you can define which tabs will be shown. Enter the tabs you want to see separated by a comma in the `tabs` parameter.
-
-    {{< jsfiddle id="zalun/NmudS" tabs="html,result" >}}
-
 ## Nearly finished
 
 In order to see your site in action, run Hugo's built-in local server.
@@ -245,3 +213,5 @@ Thanks to
 
 - [Aigars Silkalns](//colorlib.com/travelify/) for creating this theme
 - [Steve Francia](//github.com/spf13) for creating Hugo and the awesome community around the project
+- [digitalcraftsman](https://github.com/digitalcraftsman) for creating the source code for Icarus theme
+
