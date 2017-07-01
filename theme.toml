@@ -3,8 +3,8 @@ license = "MIT"
 licenselink = "//github.com/balaramadurai/hugo-travelify-theme/blob/master/LICENSE.md"
 description = "Lovely wordpress theme, now coming to Hugo. "
 homepage = "//github.com/balaramadurai/hugo-travelify-theme"
-tags = ["syntax highlighting", "rss", "gallery", "widgets", "google analytics", "responsive", "carousel", "slider"]
-features = ["syntax highlighting", "rss", "gallery", "widgets", "google analytics", "carousel", "responsive", "slider"]
+tags = ["syntax highlighting", "rss", "widgets", "google analytics", "responsive", "carousel", "slider"]
+features = ["syntax highlighting", "rss", "widgets", "google analytics", "carousel", "responsive", "slider"]
 min_version = 0.15
 
 [author]
