@@ -72,7 +72,7 @@ In the next step navigate to the `exampleSite` folder at `themes/hugo-travelify-
                 Spain-Plaza-de-Cibeles-Madrid-670x300.jpg
                 spain6-1018x460.jpg
 
-In order to get your site running, you need to copy `config.toml` and `data/l10n.toml` into the root folders.
+In order to get your site running, you need to copy `config.toml` and `data/l10n.toml` into the root folders. (Please refer to http://gohugo.io/overview/quickstart/ for installing a theme)
 
 
 ## The config file

@@ -65,7 +65,7 @@ exampleSite
             spain6-1018x460.jpg
 ```
 
-In order to get your site running, you need to copy `config.toml` and `data/l10n.toml` into the root folders.
+In order to get your site running, you need to copy `config.toml` and `data/l10n.toml` into the root folders. (Please refer to http://gohugo.io/overview/quickstart/ for installing a theme)
 
 ## The config file
 
