@@ -16,11 +16,11 @@ Some of the important features of Hugo-Travelify-Theme are:
 
 - Google Analytics
 
-  ![](/screenshot-1.png)
+  ![](https://raw.githubusercontent.com/balaramadurai/hugo-travelify-theme/master/images/screenshot-1.png)
 
-![](/screenshot-2.png)
+![](https://raw.githubusercontent.com/balaramadurai/hugo-travelify-theme/master/images/screenshot-2.png)
 
-![](/screenshot-3.png)
+![](https://raw.githubusercontent.com/balaramadurai/hugo-travelify-theme/master/images/screenshot-3.png)
 
 ## Get the theme
 
