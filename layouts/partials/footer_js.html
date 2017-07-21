@@ -17,3 +17,41 @@ MathJax.Hub.Config({
 </script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 {{ end }}
+<script type='text/javascript' src="{{ .Site.BaseURL }}js/jquery.js"></script>
+<script type='text/javascript' src="{{ .Site.BaseURL }}js/jquery-migrate.min.js"></script>
+<script type='text/javascript' src="{{ .Site.BaseURL }}js/functions.min.js"></script>
+<!-- <script type='text/javascript' src="{{ .Site.BaseURL }}js/admin-bar.min.js"></script> -->
+<script type='text/javascript' src="{{ .Site.BaseURL }}js/jquery.cycle.all.min.js"></script>
+<script type='text/javascript'>
+  /* <![CDATA[ */
+var travelify_slider_value = {"transition_effect":"fade","transition_delay":"4000","transition_duration":"1000"};
+/* ]]> */
+</script>
+<script type='text/javascript' src="{{ .Site.BaseURL }}js/slider-settings.min.js"></script>
+<script type='text/javascript' src="{{ .Site.BaseURL }}js/wp-embed.min.js"></script>
+<link rel='stylesheet' id='font-awesome-css'  href="{{ .Site.BaseURL }}css/font-awesome.min.css" type='text/css' media='all' />
+<!--[if lte IE 8]>
+    <script type="text/javascript">
+      document.body.className = document.body.className.replace( /(^|\s)(no-)?customize-support(?=\s|$)/, '' ) + ' no-customize-support';
+    </script>
+    <![endif]-->
+<!--[if gte IE 9]><!-->
+    <script type="text/javascript">
+      (function() {
+      var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+      
+						request = true;
+      
+      b[c] = b[c].replace( rcs, ' ' );
+      // The customizer requires postMessage and CORS (if the site is cross domain)
+      b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+      }());
+		</script>
+    <!--<![endif]-->
+<link rel="apple-touch-icon" href="{{ .Site.BaseURL }}apple-touch-icon.png" />
+<link rel="stylesheet" href="{{ "fancybox/jquery.fancybox.css" | absURL }}">
+<!-- <link rel='stylesheet' id='admin-bar-css'  href="/css/admin-bar.min.css" type='text/css' media='all' /> -->
+<link rel='stylesheet' id='travelify_style-css'  href="{{ .Site.BaseURL }}css/style.css" type='text/css' media='all' />
+<!-- <link rel='stylesheet' id='travelify_style-css'  href="{{ .Site.BaseURL }}css/jetpack.css" type='text/css' media='all' /> -->
+<link rel='stylesheet' id='google_font_ubuntu-css'  href="//fonts.googleapis.com/css?family=Ubuntu" type='text/css' media='all' />
+<!-- <link rel='stylesheet' id='dashicons-css'  href="{{ .Site.BaseURL }}css/dashicons.min.css" type='text/css' media='all' /> -->

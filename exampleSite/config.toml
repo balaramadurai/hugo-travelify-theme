@@ -7,7 +7,7 @@ theme = "hugo-travelify-theme"
 DisqusShortname = "nikimonikado"
 GoogleAnalytics = "UA-68204765-1"
 canonifyURLs = true
-rssURI = "feed/"
+# rssURI = "feed/" #deprecated feature
     
 [params]
     # Tell me who you are
