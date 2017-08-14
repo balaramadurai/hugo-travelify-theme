@@ -15,13 +15,11 @@ menu: ""
 Some of the important features of Hugo-Travelify-Theme are: 
 
 - Automatic slider generation with banner images
-
+- Subscribe via Email through Mailchimp integration (You have to sign up and generate the HTML code)
+- Multiple author support (Included in the taxonomy)
 - i10n data
-
 - Disqus integration
-
 - Social media share
-
 - Google Analytics
 
   ![](/screenshot-1.png)
@@ -72,7 +70,7 @@ In the next step navigate to the `exampleSite` folder at `themes/hugo-travelify-
                 Spain-Plaza-de-Cibeles-Madrid-670x300.jpg
                 spain6-1018x460.jpg
 
-In order to get your site running, you need to copy `config.toml` and `data/l10n.toml` into the root folders. (Please refer to http://gohugo.io/overview/quickstart/ for installing a theme)
+In order to get your site running, you need to copy `config.toml` and `data/l10n.toml` into the root folders.
 
 
 ## The config file
@@ -151,6 +149,8 @@ This theme also provides a profile section on the left. Add your social network 
 Beside the profile section you can add widgets on the right sidebar. The following widgets are available:
 
 - recent articles
+- Subscribe via email (Mailchimp integration - Use the method prescribed in http://kb.mailchimp.com/lists/signup-forms/add-a-signup-form-to-your-website and copy the text from `form=//username/mailchimp/path/`and copy this path to the `mailchimpform` variable under `[params.widget]` in your `config.toml`)
+- Multiple author support
 - category list
 - tag list
 - tag cloud
@@ -166,6 +166,9 @@ You can deactivate them under `params.widgets`:
         tag_cloud = true
         archives = false # This feature is yet to be implemented because of limitations in Hugo's way of working.
         search = true
+		author = true
+		mailchimp = true
+		mailchimpform = "//mailchimp/url/goes/here"
 
 ### Date line
 
@@ -214,4 +217,3 @@ Thanks to
 - [Aigars Silkalns](//colorlib.com/travelify/) for creating this theme
 - [Steve Francia](//github.com/spf13) for creating Hugo and the awesome community around the project
 - [digitalcraftsman](https://github.com/digitalcraftsman) for creating the source code for Icarus theme
-

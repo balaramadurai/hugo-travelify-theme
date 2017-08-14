@@ -1,4 +1,4 @@
-## baseURL = "http://nikimonikado.gitlab.io/hugo-travelify-theme/"
+baseURL = "http://balaramadurai.github.io/"
 title = "Travelify"
 subtitle = "Travel theme for Hugo with Slider"
 languageCode = "en-us"
@@ -11,7 +11,7 @@ canonifyURLs = true
     
 [params]
     # Tell me who you are
-
+    author = "nikimonikado"
     site_description = "Travel theme for Hugo with Slider"
     copyright  = "Copyright"
     avatar = "css/images/avatar.png"
@@ -69,10 +69,19 @@ canonifyURLs = true
     tag_cloud = true
     archives = false # This feature is yet to be implemented because of limitations in Hugo's way of working.
     search = true
+    mailchimp = true
+    mailchimpform = "//balaramadurai.us15.list-manage.com/subscribe/post?u=7f4183fa2fe7abe3dc9f4efad&amp;id=49a3dd3745"
+    author = true
+    facebook_like = true
 
 [params.slider]
     enable = true
     num_features = 6 # The slider picks up the banner images from the N most recent posts, where num_features is N.
+
+[Taxonomies]
+    tags = "tags"
+    categories = "categories"
+    author = "author"
 
 ## DONE - Menu
 ## DONE - slider 

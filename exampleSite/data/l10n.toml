@@ -50,5 +50,12 @@
     title = "Tag cloud"
     min_count = 2  # If you have many posts, then tag with just one topic makes the tag cloud cluttered. This variable can help reduce the clutter.
 
+[widgets.mailchimp]
+    title = "Subscribe via Email"
+    subscribe_text = "Enter your email address to subscribe to this blog and receive notifications of new posts by email."
+
 [widgets.tags]
     title = "Tags"
+
+[authors]
+    Title = "Authors"
