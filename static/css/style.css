@@ -351,25 +351,25 @@ input[type="reset"]:hover,input[type="button"]:hover,input[type="submit"]:hover 
 	background: #439f55;
 }
 input[type="reset"]:active,input[type="button"]:active,input[type="submit"]:active {
-    float: right;
-    font-size: 14px;
-    white-space: nowrap;
-    text-align: center;
-    margin: 0;
-    line-height: 20px;
-    display: inline-block;
-    text-decoration: none;
-    padding: 4px 12px;
-    text-transform: lowercase;
-    border: 1px solid #439f55;
-    cursor: pointer;
-    background-color: #57ad68;
-    color: #fff;
-    position: relative;
-    border-radius: 2px;
-    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
-    -webkit-box-shadow: inset 0 1px 1px rgba(255,255,255,0.2);
-    box-shadow: inset 0 1px 1px rgba(255,255,255,0.2);
+	display: inline-block;
+	border-radius: 2px;
+	font-size: 14px;
+	white-space: nowrap;
+	text-align: center;
+	margin: 0;
+	line-height: 24px;
+	display: inline-block;
+	text-decoration: none;
+	padding: 4px 12px;
+	text-transform: lowercase;
+	border: 1px solid #439f55;
+	cursor: pointer;
+	background: #57ad68;
+	color: #fff;
+	position: relative;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+	-webkit-box-shadow: inset 0 1px 1px rgba(255,255,255,0.2);
+	box-shadow: inset 0 1px 1px rgba(255,255,255,0.2);
 }
 /* Links */
 a {
