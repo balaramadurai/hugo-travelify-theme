@@ -1,0 +1,20 @@
+{{ if .Site.Params.widgets.author }}
+{{ if isset .Site.Taxonomies "author" }}
+{{ if not (eq (len .Site.Taxonomies.author) 0) }}
+<div class="widget">
+
+  <h3 class="widget-title">{{ with .Site.Data.l10n.authors.Title }}{{.}} {{ end }}
+  </h3>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+          {{ range $name, $items := .Site.Taxonomies.author.ByCount }}
+          <li><a href="{{ $.Site.BaseURL }}author/{{ $items.Name | urlize | lower }}"><i class="fa fa-user"></i> {{ $items.Name }} ({{ $items.Count }})</a>
+          </li>
+          {{ end }}
+        </ul>
+    </div>
+</div>
+{{ end }}
+{{ end }}
+{{ end }}

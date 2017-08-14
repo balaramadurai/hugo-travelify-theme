@@ -1,8 +1,10 @@
 {{ if not .Params.widgets }}
 <div id="secondary">
+  {{ partial "widgets/mailchimp" . }}
   {{ partial "widgets/search" . }}
   {{ partial "widgets/categories" . }}
   {{ partial "widgets/archive" . }}
   {{ partial "widgets/tag_cloud" . }}
+  {{ partial "widgets/author" . }}
 </div><!-- #secondary -->
 {{ end }}

@@ -1,0 +1,25 @@
+{{ if isset .Site.Params.widgets "mailchimp" }}
+{{ if isset .Site.Params.widgets "mailchimpform" }}
+{{ if .Site.Params.widgets.mailchimp }}
+<aside id="blog_subscription-2" class="widget"><h3 class="widget-title">{{with .Site.Data.l10n.widgets.mailchimp.title}}{{.}}{{end}}</h3>
+  <form action="{{ .Site.Params.widgets.mailchimpform }}" method="post">
+    <div>
+      <p>{{with .Site.Data.l10n.widgets.mailchimp.subscribe_text}}{{.}}{{end}}</p>
+    </div>
+    <p>
+      <input name="EMAIL" placeholder="Email Address" type="email">
+    </p>
+    <p>
+      <input name="FNAME" value="" placeholder="First Name" type="name">
+    </p>
+
+    <p >
+      <input value="Subscribe" type="submit">
+    </p>
+  </form>
+  				
+</aside>
+
+{{ end }}
+{{ end }}
+{{ end }}

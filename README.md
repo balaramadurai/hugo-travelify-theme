@@ -7,13 +7,11 @@
 Some of the important features of Hugo-Travelify-Theme are: 
 
 - Automatic slider generation with banner images
-
+- Subscribe via Email through Mailchimp integration (You have to sign up and generate the HTML code)
+- Multiple author support (Included in the taxonomy)
 - i10n data
-
 - Disqus integration
-
 - Social media share
-
 - Google Analytics
 
   ![](https://raw.githubusercontent.com/balaramadurai/hugo-travelify-theme/master/images/screenshot-1.png)
