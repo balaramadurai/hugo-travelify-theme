@@ -17,9 +17,9 @@ Some of the important features of Hugo-Travelify-Theme are:
 Here are some screenshots of the theme:
 
 <br>
-<img class="img-responsive" src="/img/screenshot-1.png" />
-<img class="img-responsive" src="/img/screenshot-2.png" />
-<img class="img-responsive" src="/img/screenshot-3.png" />
+<img class="img-responsive" src="https://raw.githubusercontent.com/balaramadurai/hugo-travelify-theme/master/images/screenshot-1.png" />
+<img class="img-responsive" src="https://raw.githubusercontent.com/balaramadurai/hugo-travelify-theme/master/images/screenshot-2.png" />
+<img class="img-responsive" src="https://raw.githubusercontent.com/balaramadurai/hugo-travelify-theme/master/images/screenshot-3.png" />
 
 ## Get the theme
 
