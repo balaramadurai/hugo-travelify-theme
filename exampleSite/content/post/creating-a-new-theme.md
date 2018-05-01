@@ -6,6 +6,7 @@ tags = ["theme"]
 categories = ["starting"]
 menu = ""
 banner = "banners/featured-4.jpg"
+slider = true
 +++
 
 ## Introduction
