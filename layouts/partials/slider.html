@@ -3,16 +3,7 @@
 
 <section class="featured-slider">
     <div class="slider-cycle">
-	{{ if and (isset .Site.Params.slider "auto") (.Site.Params.slider.auto) }}
-	{{ $features := add .Site.Params.slider.num_features 1 }}
-	{{ range $index, $page := first $features (where .Site.Pages "Type" "post") }}
-	{{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
-	<div class="slides {{ if eq $index 0 }} displayblock {{ else }} displaynone {{ end }}">
-	    {{ partial "single_slide" . }}
-	</div><!-- .slides -->
-	{{ end }}
-	{{ end }}
-	{{ else }}
+	{{ if and (isset .Site.Params.slider "manual") (.Site.Params.slider.manual) }}
 	{{ range $index, $page := .Site.Pages.ByParam "slider" }}
 	{{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
 	{{ if and (isset .Params "slider") (.Params.slider) }}
@@ -20,6 +11,15 @@
 	    {{ partial "single_slide" . }}
 	</div><!-- .slides -->
 	{{ end }}
+	{{ end }}
+	{{ end }}
+	{{ else }}
+	{{ $features := add .Site.Params.slider.num_features 1 }}
+	{{ range $index, $page := first $features (where .Site.Pages "Type" "post") }}
+	{{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
+	<div class="slides {{ if eq $index 0 }} displayblock {{ else }} displaynone {{ end }}">
+	    {{ partial "single_slide" . }}
+	</div><!-- .slides -->
 	{{ end }}
 	{{ end }}
 	{{ end }}
