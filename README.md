@@ -81,7 +81,7 @@ manual = false
 num_features = 4 # The slider picks up the banner images from the N most recent posts, where num_features is N.
 ```
 
-The slider can be made `manual = true` and in each of the posts you want highlighted on the slider, include `slider = true` in the frontmatter.
+The slider can be made `manual = true` and in each of the posts you want highlighted on the slider, include `slider = true` in the frontmatter. Another way to add a slideshow to the slider is by creating YAML files in the `data/slider` folder. Check the `exampleSite` for example.
 
 *Tip* - For best results in the slider, use **1018x460** resolution for the banner images.
 
@@ -189,6 +189,19 @@ banner = "banners/placeholder.png"
 This way you can store the images either in the same folder as your post or in the `static` folder.
 
 *Tip* - For best results in the slider, use **1018x460** resolution for the banner images.
+
+### 12. Social media sharing
+
+You can enable to disable social media sharing buttons selectively using the following options:
+
+```
+[params.share]
+    enable = true
+    facebook = true
+    twitter = true
+    googleplus = true
+    linkedin = true
+```
 
 ## Nearly finished
 

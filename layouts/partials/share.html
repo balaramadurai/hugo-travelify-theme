@@ -1,16 +1,49 @@
+{{ if isset .Site.Params "share" }}
+{{ if .Site.Params.share.enable }}
+
 <div class="social-icons">
-  <ul id="blog">
-    <li class="facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" title="{{ .Permalink }}" target="_blank">Share</a>
-    </li>
-    <li class="twitter">
-      <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" title="{{ .Title }}" target="_blank">Tweet</a>
-    </li>
-    <li class="google-plus">
-      <a href="https://plus.google.com/share?url={{ .Permalink }}" title="{{ .Title }}" target="_blank">+1</a>
-    </li>
-    <li class="linkedin">
-      <a href="https://www.linkedin.com/cws/share?url={{ .Permalink }}" title="{{ .Title }}" target="_blank">Share</a>
-    </li>  
-  </ul>
+    <ul id="blog">
+	{{ if isset .Site.Params.share "facebook" }}
+	{{ if .Site.Params.share.facebook }}
+	
+	<li class="facebook">
+	    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" title="{{ .Permalink }}" target="_blank">Share</a>
+	</li>
+	
+	{{ end }}
+	{{ end }}
+	
+	{{ if isset .Site.Params.share "twitter" }}
+	{{ if .Site.Params.share.twitter }}
+
+	<li class="twitter">
+	    <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" title="{{ .Title }}" target="_blank">Tweet</a>
+	</li>
+	
+	{{ end }}
+	{{ end }}
+	
+	{{ if isset .Site.Params.share "googleplus" }}
+	{{ if .Site.Params.share.googleplus }}
+	
+	<li class="google-plus">
+	    <a href="https://plus.google.com/share?url={{ .Permalink }}" title="{{ .Title }}" target="_blank">+1</a>
+	</li>
+	
+	{{ end }}
+	{{ end }}
+	
+	{{ if isset .Site.Params.share "linkedin" }}
+	{{ if .Site.Params.share.linkedin }}
+
+	<li class="linkedin">
+	    <a href="https://www.linkedin.com/cws/share?url={{ .Permalink }}" title="{{ .Title }}" target="_blank">Share</a>
+	</li>
+	
+	{{ end }}
+	{{ end }}
+    </ul>
 </div>
+
+{{ end }}
+{{ end }}

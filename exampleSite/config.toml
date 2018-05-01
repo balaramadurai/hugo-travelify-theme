@@ -76,7 +76,7 @@ canonifyURLs = true
 
 [params.slider]
     enable = true
-    manual = true	
+    manual = false
     num_features = 6 # The slider picks up the banner images from the N most recent posts, where num_features is N.
 
 [Taxonomies]
