@@ -70,15 +70,18 @@ To get your site running, copy `config.toml` and `data/l10n.toml` into the root 
 
 Now, let us take a look at `config.toml`. Let's take a look at some of the settings.
 
-### 1. Automatic slider
+### 1. Automatic or Manual slider
 
 Using the parameters in the config, the slider can be switched on and off at will and the number of banner images on the carousel can be customized.
 
 ```
 [params.slider]
 enable = true
+manual = false
 num_features = 4 # The slider picks up the banner images from the N most recent posts, where num_features is N.
 ```
+
+The slider can be made `manual = true` and in each of the posts you want highlighted on the slider, include `slider = true` in the frontmatter.
 
 *Tip* - For best results in the slider, use **1018x460** resolution for the banner images.
 
