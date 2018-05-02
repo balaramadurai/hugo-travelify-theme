@@ -10,8 +10,8 @@
 	  {{ partial "share" . }}
 	  </div>
           <div class="entry-content" itemprop="articleBody">
-            {{ .Content }}
-	    {{ partial "share" . }}
+              {{ .Content }}
+	      <!-- -    {{ partial "share" . }}  -->	
           </div>
 	  {{ if (.Params.tags) }}
 	  <div class="tags">

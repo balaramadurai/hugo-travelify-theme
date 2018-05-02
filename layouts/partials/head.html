@@ -1,4 +1,3 @@
-
 <div class="container clearfix">
   <div class="hgroup-wrap clearfix">
 {{ if .Site.Data.l10n.social }}
@@ -12,12 +11,19 @@
 	  {{ end }}
 	  {{ if .Site.Social.twitter }}
 	  <li class="twitter">
-	    <a href="https://twitter.com/{{ .Site.Social.twitter }}" title="{{ .Site.Data.l10n.social.twitter }}" target="_blank"></a>
+	      <a href="https://twitter.com/{{ .Site.Social.twitter }}" title="{{ .Site.Data.l10n.social.twitter }}" target="_blank"></a>
 	  </li>
 	  {{ end }}
+	  {{ if .Site.Social.email }}
+	  <li class="email">
+	      <a href="{{ .Site.Social.email }}" title="mailto:{{ .Site.Data.l10n.social.email }}" target="_blank"></a>
+	  </li>
+	  {{ end }}
+	  {{ if .Site.Social.rss }}
 	  <li class="rss">
 	    <a href="{{ .Site.Social.feed }}" title="{{ .Site.Data.l10n.social.RSS }}" target="_blank"></a>
 	  </li>
+	  {{ end }}
 	  {{ if .Site.Social.googleplus }}
 	  <li class="google-plus">
 	    <a href="https://www.google.com/+{{ .Site.Social.googleplus }}" title="{{ .Site.Data.l10n.social.googleplus }}" target="_blank"></a>

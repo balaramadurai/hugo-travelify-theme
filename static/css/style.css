@@ -678,6 +678,12 @@ a.more-link:hover {
 .social-icons ul li.github a:hover {
 	background: #151013;
 }
+.social-icons ul li.email a:before {
+	content: '\f410';
+}
+.social-icons ul li.email a:hover {
+	background: #555555;
+}
 
 /* Header Image */
 .header-image {
