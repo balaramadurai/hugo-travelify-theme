@@ -16,7 +16,7 @@
 	  {{ end }}
 	  {{ if .Site.Social.email }}
 	  <li class="email">
-	      <a href="{{ .Site.Social.email }}" title="mailto:{{ .Site.Data.l10n.social.email }}" target="_blank"></a>
+	      <a href="mailto:{{ .Site.Social.email }}" title="{{ .Site.Data.l10n.social.email }}" target="_blank"></a>
 	  </li>
 	  {{ end }}
 	  {{ if .Site.Social.rss }}
