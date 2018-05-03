@@ -69,6 +69,7 @@ canonifyURLs = true
     twitter = true
     googleplus = true
     linkedin = true
+    email = true
 	
 [social]
 # Add your social network accounts to the profile section on the left

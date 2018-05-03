@@ -41,6 +41,14 @@
     github = "Follow us on GitHub"
     email = "Email us"
 
+[share]
+	facebook = "Share"
+	twitter = "Tweet"
+	googleplus = "+1"
+	linkedin = "Share"
+	email = "Email"
+	emailmessage = "Hello there, I would to share this article with you"
+	
 [widgets.categories]
     title = "Categories"
 
