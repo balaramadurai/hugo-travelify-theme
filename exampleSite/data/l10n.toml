@@ -39,6 +39,7 @@
     flickr = "Follow us on Flickr"
     youtube = "Follow us on YouTube"
     github = "Follow us on GitHub"
+    email = "Email us"
 
 [widgets.categories]
     title = "Categories"

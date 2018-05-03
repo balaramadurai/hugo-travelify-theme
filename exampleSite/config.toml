@@ -43,12 +43,38 @@ canonifyURLs = true
     url   = "/contact/"
     weight = 20
 
+[[menu.main]]
+    name  = "Contact2"
+    url   = "/contact/"
+    parent = "Contact"
 
-   
+[[menu.main]]
+    name  = "Contact21"
+    url   = "/contact/"
+    parent = "Contact2"
+
+[[menu.main]]
+    name  = "Contact22"
+    url   = "/contact/"
+    parent = "Contact2"
+
+[[menu.main]]
+    name  = "Contact3"
+    url   = "/contact/"
+    parent = "Contact"
+		
+[params.share]
+    enable = true
+    facebook = true
+    twitter = true
+    googleplus = true
+    linkedin = true
+	
 [social]
 # Add your social network accounts to the profile section on the left
 # by entering your username. The links to your account will be
 # created automatically.
+    rss             = "Needed" # leave this to blank if you do not want RSS feed icon to appear on top
     github          = "nikimonikado"
     flickr          = "nikimonikado"
     instagram       = "nikimonikado"
@@ -60,6 +86,7 @@ canonifyURLs = true
     googleplus      = "nikimonikado"
     facebook        = "nikimonikado"
     twitter         = "nikimonikado"
+    email           = "joe@example.com"	
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]

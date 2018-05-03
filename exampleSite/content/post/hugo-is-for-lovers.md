@@ -7,6 +7,7 @@ categories = ["pseudo"]
 menu = ""
 banner = "banners/7148951717_9bbf185db3_h-1018x460.jpg"
 slider = true
+disable_profile = true
 +++
 
 ## Step 1. Install Hugo
