@@ -107,7 +107,7 @@ disable_comments = true
 +++
 ```
 
-### 4. Menu
+### 4. Menu & Nested Menus
 
 The entries in the items menu can be customized. First, let us link a post that you've written. We can do this in the `frontmatter` of the post's content file by setting `menu` to `main`.
 
@@ -127,6 +127,25 @@ Further, we can add entries that don't link to posts. Back in the `config.toml` 
 ```
 
 Define a label and enter the URL of the resource you want to link. With `before` you can decide whether the link should appear before **or** after all linked posts in the menu. Therefore, `Home` appears before the linked post.
+
+For nested menus, you can use the following format:
+
+```
+[[menu.main]]
+    name  = "Contact2"
+    url   = "/contact/"
+    parent = "Contact"
+
+[[menu.main]]
+    name  = "Contact21"
+    url   = "/contact/"
+    parent = "Contact2"
+
+[[menu.main]]
+    name  = "Contact22"
+    url   = "/contact/"
+    parent = "Contact2"
+```
 
 ### 5. Sidebars
 
