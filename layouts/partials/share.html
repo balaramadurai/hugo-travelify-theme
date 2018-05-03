@@ -1,13 +1,15 @@
 {{ if isset .Site.Params "share" }}
 {{ if .Site.Params.share.enable }}
 
+{{ if .Site.Data.l10n.share }}
+
 <div class="social-icons">
     <ul id="blog">
 	{{ if isset .Site.Params.share "facebook" }}
 	{{ if .Site.Params.share.facebook }}
 	
 	<li class="facebook">
-	    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" title="{{ .Permalink }}" target="_blank">Share</a>
+	    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" title="{{ .Permalink }}" target="_blank">{{ .Site.Data.l10n.share.facebook }}</a>
 	</li>
 	
 	{{ end }}
@@ -17,7 +19,7 @@
 	{{ if .Site.Params.share.twitter }}
 
 	<li class="twitter">
-	    <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" title="{{ .Title }}" target="_blank">Tweet</a>
+	    <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" title="{{ .Title }}" target="_blank">{{ .Site.Data.l10n.share.twitter }}</a>
 	</li>
 	
 	{{ end }}
@@ -27,7 +29,7 @@
 	{{ if .Site.Params.share.googleplus }}
 	
 	<li class="google-plus">
-	    <a href="https://plus.google.com/share?url={{ .Permalink }}" title="{{ .Title }}" target="_blank">+1</a>
+	    <a href="https://plus.google.com/share?url={{ .Permalink }}" title="{{ .Title }}" target="_blank">{{ .Site.Data.l10n.share.googleplus }}</a>
 	</li>
 	
 	{{ end }}
@@ -37,13 +39,25 @@
 	{{ if .Site.Params.share.linkedin }}
 
 	<li class="linkedin">
-	    <a href="https://www.linkedin.com/cws/share?url={{ .Permalink }}" title="{{ .Title }}" target="_blank">Share</a>
+	    <a href="https://www.linkedin.com/cws/share?url={{ .Permalink }}" title="{{ .Title }}" target="_blank">{{ .Site.Data.l10n.share.linkedin }}</a>
+	</li>
+	
+	{{ end }}
+	{{ end }}
+
+	{{ if isset .Site.Params.share "email" }}
+	{{ if .Site.Params.share.email }}
+
+	<li class="email">
+	    <a href="mailto:?subject={{ .Title }}&body={{ .Site.Data.l10n.share.emailmessage }} {{ .Title }} - {{ .Permalink }}">{{ .Site.Data.l10n.share.email }}
+	    </a>
 	</li>
 	
 	{{ end }}
 	{{ end }}
     </ul>
 </div>
+{{ end }}
 
 {{ end }}
 {{ end }}
