@@ -1,5 +1,5 @@
 {{ if not .Params.meta_disable }}
-    {{ $date_format := "January 02, 2006" }}
+    {{ $date_format := .Site.Params.date_format }}
 <div class="entry-meta-bar clearfix">
   <div class="entry-meta">
     {{ if isset .Params "author" }}

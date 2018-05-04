@@ -140,11 +140,18 @@ For nested menus, you can use the following format:
     name  = "Contact21"
     url   = "/contact/"
     parent = "Contact2"
+    weight = 20
 
 [[menu.main]]
     name  = "Contact22"
     url   = "/contact/"
     parent = "Contact2"
+    weight = 10
+
+[[menu.main]]
+    name  = "Contact3"
+    url   = "/contact/"
+    parent = "Contact"
 ```
 
 ### 5. Sidebars
