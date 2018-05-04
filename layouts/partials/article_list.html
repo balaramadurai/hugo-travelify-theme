@@ -1,4 +1,4 @@
-{{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
+{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
 {{ $readmore := "Read More" }}
 {{ if .Site.Data.l10n.articles.read_more }}
 {{ $readmore := .Site.Data.l10n.articles.read_more }}
