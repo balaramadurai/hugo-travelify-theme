@@ -4,11 +4,10 @@ subtitle = "Travel theme for Hugo with Slider"
 languageCode = "en-us"
 # preservetaxonomynames = true
 theme = "hugo-travelify-theme"
-DisqusShortname = "nikimonikado"
 GoogleAnalytics = "UA-68204765-1"
 canonifyURLs = true
 # rssURI = "feed/" #deprecated feature
-    
+
 [params]
     # Tell me who you are
     author = "nikimonikado"
@@ -16,7 +15,7 @@ canonifyURLs = true
     copyright  = "Copyright"
     avatar = "css/images/avatar.png"
     logo = "css/images/logo.png"
-    disable_mathjax = false # set to true to disable MathJax
+    disable_mathjax = true # set to true to disable MathJax
 
     # Format dates with Go's time formatting
     date_format = "02 January, 2006"
@@ -72,7 +71,12 @@ canonifyURLs = true
     googleplus = true
     linkedin = true
     email = true
-	
+
+[params.privacy]
+enable = true # false implies switching on tracking application, you can individually turn off applications that you don't want. If enable = true, then all tracking apps are switched off
+facebook_like = true
+DisqusShortname = "nikimonikado"
+
 [social]
 # Add your social network accounts to the profile section on the left
 # by entering your username. The links to your account will be
@@ -102,7 +106,6 @@ canonifyURLs = true
     mailchimp = true
     mailchimpform = "//balaramadurai.us15.list-manage.com/subscribe/post?u=7f4183fa2fe7abe3dc9f4efad&amp;id=49a3dd3745"
     author = true
-    facebook_like = true
 
 [params.slider]
     enable = true

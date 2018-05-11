@@ -26,7 +26,7 @@
 		{{ partial "prev_next_post" . }}
 	    </article>
 	    
-	    {{ if and (not (eq .Site.DisqusShortname "")) (not .Params.disable_comments) }}
+	    {{ if and (and (not (eq .Site.Params.privacy.DisqusShortname "")) (not .Params.disable_comments)) (not .Site.Params.privacy.enable) }}
 	    <section id="comments">
 		<div id="disqus_thread">
 		    {{ template "_internal/disqus.html" . }}

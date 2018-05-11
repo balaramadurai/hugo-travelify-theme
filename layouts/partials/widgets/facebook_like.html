@@ -1,4 +1,4 @@
-{{ if .Site.Params.widgets.facebook_like }}
+{{ if (and (not .Site.Params.privacy.enable) .Site.Params.privacy.facebook_like) }}
 
 <aside id="facebook-likebox-2" class="widget widget_facebook_likebox">
   <h3 class="widget-title">

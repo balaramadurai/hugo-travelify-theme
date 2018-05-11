@@ -53,7 +53,7 @@
     title = "Categories"
 
 [widgets.recent_articles]
-    title = "Recents"
+    title = "Recent Posts"
 
 [widgets.tag_cloud]
     title = "Tag cloud"
