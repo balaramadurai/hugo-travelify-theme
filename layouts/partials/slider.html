@@ -3,34 +3,36 @@
 
 <section class="featured-slider">
     <div class="slider-cycle">
+	{{ if .Site.Data.slider }}
 	{{ if gt (len .Site.Data.slider) 0 }}
 	{{ range $index, $slide := .Site.Data.slider }}
 	{{ if and (isset $slide "banner") (not (eq .banner "")) }}
 	<div class="slides {{ if eq $index 0 }} displayblock {{ else }} displaynone {{ end }}">
-	    <figure>
-		<a href="{{ .url }}" title="{{ .Title }}">
-		    <img src="{{ .banner }}" class="pngfix wp-post-image" alt="{{ .Title }}" title="{{ .Title }}">
+		    <figure>
+			    <a href="{{ .url }}" title="{{ .Title }}">
+			    <img src="{{ .banner }}" class="pngfix wp-post-image" alt="{{ .Title }}" title="{{ .Title }}">
 		</a>
 	    </figure>
-	    <article class="featured-text">
-		<div class="featured-title">
-		    <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+		    <article class="featured-text">
+			    <div class="featured-title">
+			    <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
 		</div><!-- .featured-title -->
-		<div class="featured-content">{{ printf "%s" .Summary | markdownify }}
+			    <div class="featured-content">{{ printf "%s" .Summary | markdownify }}
 		</div><!-- .featured-content -->
 	    </article><!-- .featured-text -->
-	</div><!-- .slides -->
+		</div><!-- .slides -->
 	{{ end }}
 	{{ end }}
 	{{ end }}
-	
+	{{ end }}
+
 	{{ if and (isset .Site.Params.slider "manual") (.Site.Params.slider.manual) }}
 	{{ range $index, $page := .Site.Pages.ByParam "slider" }}
 	{{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
 	{{ if and (isset .Params "slider") (.Params.slider) }}
 	<div class="slides {{ if eq $index 0 }} displayblock {{ else }} displaynone {{ end }}">
-	    {{ partial "single_slide" . }}
-	</div><!-- .slides -->
+		    {{ partial "single_slide" . }}
+		</div><!-- .slides -->
 	{{ end }}
 	{{ end }}
 	{{ end }}
@@ -39,18 +41,15 @@
 	{{ range $index, $page := first $features (where .Site.Pages "Type" "post") }}
 	{{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
 	<div class="slides {{ if eq $index 0 }} displayblock {{ else }} displaynone {{ end }}">
-	    {{ partial "single_slide" . }}
-	</div><!-- .slides -->
+		    {{ partial "single_slide" . }}
+		</div><!-- .slides -->
 	{{ end }}
 	{{ end }}
 	{{ end }}
-  </div>
-  <nav id="controllers" class="clearfix">
-  </nav>
-  <!-- #controllers -->
-</section><!-- .featured-slider -->		
+    </div>
+    <nav id="controllers" class="clearfix">
+    </nav>
+    <!-- #controllers -->
+</section><!-- .featured-slider -->
 {{ end }}
 {{ end }}
-
-
-
