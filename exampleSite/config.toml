@@ -33,19 +33,19 @@ canonifyURLs = true
 
 
 [[menu.main]]
-    name  = "About"
+    name  = "iOS"
     url   = "/about/"
     weight = 10
     
 [[menu.main]]
-    name  = "Contact"
+    name  = "contact"
     url   = "/contact/"
     weight = 20
 
 [[menu.main]]
     name  = "Contact2"
     url   = "/contact/"
-    parent = "Contact"
+    parent = "contact"
 
 [[menu.main]]
     name  = "Contact21"
@@ -54,15 +54,15 @@ canonifyURLs = true
     weight = 20
 
 [[menu.main]]
-    name  = "Contact22"
+    name  = "cOntact22"
     url   = "/contact/"
     parent = "Contact2"
     weight = 10
 
 [[menu.main]]
-    name  = "Contact3"
+    name  = "cOntact3"
     url   = "/contact/"
-    parent = "Contact"
+    parent = "contact"
 		
 [params.share]
     enable = true
