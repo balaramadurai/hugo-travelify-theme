@@ -10,7 +10,7 @@
 	<div class="slides {{ if eq $index 0 }} displayblock {{ else }} displaynone {{ end }}">
 		    <figure>
 			    <a href="{{ .url }}" title="{{ .Title }}">
-			    <img src="{{ .banner }}" class="pngfix wp-post-image" alt="{{ .Title }}" title="{{ .Title }}">
+			    <img src="{{ .banner | absURL }}" class="pngfix wp-post-image" alt="{{ .Title }}" title="{{ .Title }}">
 		</a>
 	    </figure>
 		    <article class="featured-text">
