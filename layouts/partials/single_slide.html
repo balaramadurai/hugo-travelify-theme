@@ -1,6 +1,6 @@
 <figure>
     <a href="{{ .Permalink }}" title="{{ .Title }}">
-	<img src="{{ .Params.banner }}" class="pngfix wp-post-image" alt="{{ .Title }}" title="{{ .Title }}">
+	<img src="{{ .Params.banner  | absURL }}" class="pngfix wp-post-image" alt="{{ .Title }}" title="{{ .Title }}">
     </a>
 </figure>
 <article class="featured-text">
