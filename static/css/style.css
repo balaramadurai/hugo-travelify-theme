@@ -577,6 +577,7 @@ a.more-link:hover {
 	margin-top: 10px;
 	float: left;
 	padding-right: 1px;
+	list-style: none;
 }
 .social-icons ul li a {
 	display: inline-block;
