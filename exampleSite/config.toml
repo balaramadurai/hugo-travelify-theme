@@ -33,7 +33,7 @@ canonifyURLs = true
 
 
 [[menu.main]]
-    name  = "iOS"
+    name  = "About"
     url   = "/about/"
     weight = 10
     
