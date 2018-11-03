@@ -64,7 +64,7 @@ exampleSite
             spain6-1018x460.jpg
 ```
 
-To get your site running, copy `config.toml` and `data/l10n.toml` into the root folder. (Please refer to http://gohugo.io/overview/quickstart/ for installing a Hugo theme.)
+To get your site running, copy the entire contents of the example site using `cp -r themes/hugo-travelify-theme/exampleSite/* .` into the root folder. (Please refer to http://gohugo.io/overview/quickstart/ for installing a Hugo theme.)
 
 ## The `config` file
 
