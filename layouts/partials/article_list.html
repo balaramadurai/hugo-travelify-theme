@@ -1,8 +1,5 @@
 {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
-{{ $readmore := "Read More" }}
-{{ if .Site.Data.l10n.articles.read_more }}
-{{ $readmore := .Site.Data.l10n.articles.read_more }}
-{{ end }}
+
 {{ range $paginator.Pages }}
 <section id="main" class="post type-post status-publish format-standard has-post-thumbnail hentry">
   <article>
@@ -25,7 +22,7 @@
     {{ partial "article_footer" . }}
     <span>
       <a class="readmore" href="{{ .Permalink }}">
-	{{ $readmore }}
+	{{ with .Site.Data.l10n.articles.read_more }}{{ . }}{{ end }}
       </a>
     </span>
     
