@@ -4,7 +4,7 @@ subtitle = "Travel theme for Hugo with Slider"
 languageCode = "en-us"
 # preservetaxonomynames = true
 theme = "hugo-travelify-theme"
-GoogleAnalytics = "UA-68204765-1"
+GoogleAnalytics = "" # Add your own Google analytics code here in the format UA-XXXXXXXX-X
 canonifyURLs = true
 # rssURI = "feed/" #deprecated feature
 
