@@ -79,8 +79,10 @@
 	<a href="/" rel="home">
 	  {{ if .Site.Params.logo }}
           <img src="{{ .Site.Params.logo | absURL }}"></img>
-	  {{end}}
+	  {{ end }}
+	  {{ if .Site.Params.title_in_logo }}
 	  <span class="site-title">{{ .Site.Title }}</span>
+	  {{ end }}
 	</a>
       </h1>
       <h2 id="site-description">{{ .Site.Params.site_description }}</h2>

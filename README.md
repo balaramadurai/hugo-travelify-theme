@@ -8,6 +8,8 @@ Some of the important features of Hugo-Travelify-Theme are:
 
 - Disqus integration
 
+- logo (with option to switch on or off the title)
+
 - Social media sharing options
 
 - Google Analytics

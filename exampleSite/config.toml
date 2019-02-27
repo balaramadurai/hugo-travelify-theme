@@ -15,6 +15,7 @@ canonifyURLs = true
     copyright  = "Copyright"
 #    avatar = "avatar.png"
     logo = "logo.png"
+    title_in_logo = true # set to true if you want the title along with the logo
     disable_mathjax = true # set to true to disable MathJax
 
     # Format dates with Go's time formatting
