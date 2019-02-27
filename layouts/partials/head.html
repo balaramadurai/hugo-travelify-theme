@@ -77,7 +77,10 @@
     <hgroup id="site-logo" class="clearfix">
       <h1 id="site-title">
 	<a href="/" rel="home">
-	  {{ .Site.Title }}
+	  {{ if .Site.Params.logo }}
+          <img src="{{ .Site.Params.logo | absURL }}"></img>
+	  {{end}}
+	  <span class="site-title">{{ .Site.Title }}</span>
 	</a>
       </h1>
       <h2 id="site-description">{{ .Site.Params.site_description }}</h2>

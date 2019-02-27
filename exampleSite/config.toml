@@ -13,8 +13,8 @@ canonifyURLs = true
     author = "nikimonikado"
     site_description = "Travel theme for Hugo with Slider"
     copyright  = "Copyright"
-    avatar = "css/images/avatar.png"
-    logo = "css/images/logo.png"
+#    avatar = "avatar.png"
+    logo = "logo.png"
     disable_mathjax = true # set to true to disable MathJax
 
     # Format dates with Go's time formatting
