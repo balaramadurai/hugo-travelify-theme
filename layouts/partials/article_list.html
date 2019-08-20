@@ -1,4 +1,4 @@
-{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+{{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") }}
 
 {{ range $paginator.Pages }}
 <section id="main" class="post type-post status-publish format-standard has-post-thumbnail hentry">
