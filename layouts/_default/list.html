@@ -18,7 +18,7 @@
 	  <div {{ if .Site.Params.widgets }}id="primary"{{ end }} class="no-margin-left">
 	    <div id="content">
 	      <section class="post type-post status-publish format-standard has-post-thumbnail hentry ">
-		{{ $paginator := .Paginate .Site.RegularPages }}
+		{{ $paginator := .Paginate .Data.Pages }}
 		{{ range $paginator.Pages }}
 		{{ .Render "summary" }} 
 		{{ end }}

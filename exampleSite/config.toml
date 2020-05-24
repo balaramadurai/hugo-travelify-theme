@@ -112,10 +112,15 @@ DisqusShortname = "nikimonikado"
     enable = true
     manual = false # Setting manual to true renders the slide selection to only those where the post has a slider=true option enabled
     num_features = 6 # The slider picks up the banner images from the N most recent posts, where num_features is N.
+    
+[permalinks]
+    categories = "/categories/:slug/"
+    tags = "/tags/:slug/"
 
-[Taxonomies]
-    tags = "tags"
-    categories = "categories"
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+    series = "series"
     author = "author"
 
 ## DONE - Menu
