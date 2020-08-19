@@ -105,7 +105,11 @@ DisqusShortname = "nikimonikado"
     archives = false # This feature is yet to be implemented because of limitations in Hugo's way of working.
     search = true
     mailchimp = true
-    mailchimpform = "//balaramadurai.us15.list-manage.com/subscribe/post?u=7f4183fa2fe7abe3dc9f4efad&amp;id=49a3dd3745"
+    mailchimpform = "//balaramadurai.us15.list-manage.com/subscribe/post?u=7f4183fa2fe7abe3dc9f4efad&amp;id=49a3dd3745" 
+    # grab the mailchimpform value by following instructions here - https://mailchimp.com/help/add-a-signup-form-to-your-website/
+    # Copy the URL in the action parameter inside the form
+    # <div id="mc_embed_signup"><form action="https://balaramadurai.us15.list-manage.com/subscribe/post?u=7f4183fa2fe7abe3dc9f4efad&amp;id=49a3dd3745" method="post"
+
     author = true
 
 [params.slider]
