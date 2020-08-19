@@ -3,9 +3,9 @@ The homepage of this Travelify theme is at [https://themes.gohugo.io/hugo-travel
 Some of the important features of Hugo-Travelify-Theme are: 
 
 - Automatic slider generation with banner images
-
-- l10n data (for translation purposes)
-
+- Subscribe via Email through Mailchimp integration (You have to sign up and generate the HTML code)
+- Multiple author support (Included in the taxonomy)
+- i10n data
 - Disqus integration
 
 - logo (with option to switch on or off the title)
@@ -176,6 +176,7 @@ This theme also provides a profile section. Add your social network accounts to 
 You can add widgets to the right sidebar. The following widgets are available:
 
 - recent articles
+- Multiple author support
 - category list
 - tag list
 - tag cloud
@@ -192,6 +193,12 @@ You can deactivate them under `params.widgets`:
     tag_cloud = true
     archives = false # This feature is yet to be implemented because of limitations in Hugo's way of working.
     search = true
+	author = true
+	mailchimp = true
+	mailchimpform = "//mailchimp/url/goes/here"
+    # grab the mailchimpform value by following instructions here - https://mailchimp.com/help/add-a-signup-form-to-your-website/
+    # Copy the URL in the action parameter inside the form
+    # <div id="mc_embed_signup"><form action="https://balaramadurai.us15.list-manage.com/subscribe/post?u=7f4183fa2fe7abe3dc9f4efad&amp;id=49a3dd3745" method="post"
 ```
 
 ### 8. Date line
