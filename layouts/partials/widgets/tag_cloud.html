@@ -9,10 +9,12 @@
 {{ $baseurl := .Site.BaseURL }}
 {{ range $name, $value := .Site.Taxonomies.tags }}
     {{ if (gt $value.Count $min_count) }}
-    <a href="{{ $baseurl }}tags/{{ $name | urlize }}" style="font-size: {{ add ($value.Count) $mag_factor }}px;" title="{{ ($value.Count) }} topics">
+    {{ with site.GetPage (printf "/%s/%s" "tags" $name) }}
+    <a href="{{ .Permalink }}" style="font-size: {{ add ($value.Count) $mag_factor }}px;" title="{{ ($value.Count) }} topics">
       <!--a href="{{ $baseurl }}/tags/{{ $name | urlize }}"-->
       {{ $name | title }}
     </a>
+      {{ end }}
       {{ end }}
       {{ end }}
   </div>
