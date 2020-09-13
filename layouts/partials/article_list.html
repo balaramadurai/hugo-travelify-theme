@@ -20,12 +20,13 @@
       {{ partial "share" . }}
     </div>
     {{ partial "article_footer" . }}
+    {{ if .Truncated }}
     <span>
-      <a class="readmore" href="{{ .Permalink }}">
-	{{ with .Site.Data.l10n.articles.read_more }}{{ . }}{{ end }}
+      <a class="readmore" href="{{ .RelPermalink }}">
+	    {{ with .Site.Data.l10n.articles.read_more }}{{ . }}{{ end }}
       </a>
     </span>
-    
+    {{ end }}{{/* if .Truncated */}}
     </div>
 
 
