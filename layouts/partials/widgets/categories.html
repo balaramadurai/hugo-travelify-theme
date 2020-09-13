@@ -2,7 +2,7 @@
   <h3 class="widget-title">{{with .Site.Data.l10n.widgets.categories.title}}{{.}}{{end}}</h3>
   <ul>
     {{ range $name, $items := .Site.Taxonomies.categories }}
-    {{ with site.GetPage (printf "/%s/%s" "categories" $name) }}
+    {{ with site.GetPage (printf "/%s/%s" "categories" ($name | urlize)) }}
     <li class="cat-item">
       <a href="{{ .Permalink }}">{{ $name | title }}</a> ({{ len $items }})
     </li>
