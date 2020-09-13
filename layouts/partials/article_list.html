@@ -6,11 +6,11 @@
     {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
     <figure class="post-featured-image">
       <a href="{{ .RelPermalink }}" itemprop="url">
-	<img src="{{ .Params.banner | absURL }}" class="attachment-featured size-featured wp-post-image"/>
+      <img src="{{ .Params.banner | absURL }}" class="attachment-featured size-featured wp-post-image"/>
       </a>
-    </figure> 
+    </figure>
     {{ end }}
-    
+
     {{ partial "article_header" . }}
     <div class="article-entry entry-content clearfix" itemprop="articleBody">
       <p>
@@ -23,7 +23,7 @@
     {{ if .Truncated }}
     <span>
       <a class="readmore" href="{{ .RelPermalink }}">
-	    {{ with .Site.Data.l10n.articles.read_more }}{{ . }}{{ end }}
+      {{ with .Site.Data.l10n.articles.read_more }}{{ . }}{{ end }}
       </a>
     </span>
     {{ end }}{{/* if .Truncated */}}
