@@ -237,6 +237,20 @@ You can enable to disable social media sharing buttons selectively using the fol
     googleplus = true
     linkedin = true
 ```
+### 13. Permalink Slugs
+
+You can customize the slugs to look like this 
+
+e.g. in the `[permalinks]` section, categories can be set up in these
+different ways:
+
+
+```
+categories = "/category/:slug/"
+categories = "/categories/:slug/"
+```
+
+Thanks to @sandipb with the PR - https://github.com/balaramadurai/hugo-travelify-theme/pull/31
 
 ## Nearly finished
 
