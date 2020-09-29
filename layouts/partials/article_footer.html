@@ -19,15 +19,16 @@
       <time class="entry-date published" datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format $date_format }}</time>
     </span>
     {{ end }}
-    
+
     {{ if isset .Params "categories" }}
     {{ $categoriesLen := len .Params.categories }}
     {{ if gt $categoriesLen 0 }}
     <span class="category">
       {{ range $k, $v := .Params.categories }}
-      {{ $url := printf "%s/%s" "categories" (. | urlize | lower) }}
-      <a class="article-category-link" href="{{ $url | absURL }}">{{ . }}</a>
+      {{ with site.GetPage (printf "/%s/%s" "categories" ($v | urlize)) }}
+      <a class="article-category-link" href="{{ .Permalink }}">{{ $v }}</a>
       {{ if lt $k (sub $categoriesLen 1) }},{{ end }}
+      {{ end }}
       {{ end }}
     </span>
     {{ end }}
