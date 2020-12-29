@@ -76,24 +76,23 @@ canonifyURLs = true
 [params.privacy]
 enable = true # false implies switching on tracking application, you can individually turn off applications that you don't want. If enable = true, then all tracking apps are switched off
 facebook_like = true
-DisqusShortname = "nikimonikado"
+DisqusShortname = "example"
 
 [social]
 # Add your social network accounts to the profile section on the left
 # by entering your username. The links to your account will be
 # created automatically.
     rss             = "Needed" # leave this to blank if you do not want RSS feed icon to appear on top
-    github          = "nikimonikado"
-    flickr          = "nikimonikado"
-    instagram       = "nikimonikado"
-    youtube         = "nikimonikado"
-    vimeo           = "nikimonikado"
-    tumblr          = "nikimonikado"
-    linkedin        = "nikimonikado"
-    pinterest       = "nikimonikado"
-    googleplus      = "nikimonikado"
-    facebook        = "nikimonikado"
-    twitter         = "nikimonikado"
+    github          = "example"
+    flickr          = "example"
+    instagram       = "example"
+    youtube         = "example"
+    vimeo           = "example"
+    tumblr          = "example"
+    linkedin        = "example"
+    pinterest       = "example"
+    facebook        = "example"
+    twitter         = "example"
     email           = "joe@example.com"	
 
 # Enable and disable widgets for the right sidebar
@@ -114,7 +113,7 @@ DisqusShortname = "nikimonikado"
     num_features = 6 # The slider picks up the banner images from the N most recent posts, where num_features is N.
     
 [permalinks]
-    categories = "/categories/:slug/"
+    categories = "/categories/:slug/" #can be changed to "/category/:slug/"
     tags = "/tags/:slug/"
 
 [taxonomies]
