@@ -69,7 +69,6 @@ canonifyURLs = true
     enable = true
     facebook = true
     twitter = true
-    googleplus = true
     linkedin = true
     email = true
 
