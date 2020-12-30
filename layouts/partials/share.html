@@ -25,16 +25,6 @@
 	{{ end }}
 	{{ end }}
 	
-	{{ if isset .Site.Params.share "googleplus" }}
-	{{ if .Site.Params.share.googleplus }}
-	
-	<li class="google-plus">
-	    <a href="https://plus.google.com/share?url={{ .Permalink }}" title="{{ .Title }}" target="_blank">{{ .Site.Data.l10n.share.googleplus }}</a>
-	</li>
-	
-	{{ end }}
-	{{ end }}
-	
 	{{ if isset .Site.Params.share "linkedin" }}
 	{{ if .Site.Params.share.linkedin }}
 

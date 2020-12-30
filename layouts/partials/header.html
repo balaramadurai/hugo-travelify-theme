@@ -1,5 +1,7 @@
 {{ $css := resources.Get "style.css" }}
 {{ $style := $css | resources.Minify }}
+{{ $embed_css := resources.Get "embed.css" }}
+{{ $embed_style := $embed_css | resources.Minify }}
 <head>
     <title>{{ if .IsHome }}{{ .Site.Title }}  - {{ .Site.Params.site_description }} {{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }} </title>
     <!--    <link rel='dns-prefetch' href='//fonts.googleapis.com' />  -->
@@ -8,6 +10,7 @@
     <meta name="referrer" content="no-referrer">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel='stylesheet' id='travelify_style-css'  href="{{ $style.Permalink }}" type='text/css' media='all' />
+    <link rel='stylesheet' id='embed_style-css'  href="{{ $embed_style.Permalink }}" type='text/css' media='all' />
     <link rel='stylesheet' id='google_font_ubuntu-css'  href="{{ $style.Permalink }}" type='text/css' media='all' />
     <link rel="shortcut icon" href="{{ .Site.BaseURL }}/favicon.ico" type="image/x-icon">
     {{ if and (and (not (eq .Site.DisqusShortname "")) (not .Params.disable_comments)) }}

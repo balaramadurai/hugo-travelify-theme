@@ -85,6 +85,9 @@ num_features = 4 # The slider picks up the banner images from the N most recent 
 
 The slider can be made `manual = true` and in each of the posts you want highlighted on the slider, include `slider = true` in the frontmatter. Another way to add a slideshow to the slider is by creating YAML files in the `data/slider` folder. Check the `exampleSite` for example.
 
+#### Videos in slider
+You can now add a video (from YouTube or Vimeo or Dailymotion or your own mp4/webm file) in the slider. (Thanks to [https://github.com/balaramadurai/hugo-travelify-theme/issues/32](Issue #32) for the idea)
+
 *Tip* - For best results in the slider, use **1018x460** resolution for the banner images.
 
 ### 2. Google Analytics
