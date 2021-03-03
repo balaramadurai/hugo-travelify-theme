@@ -33,6 +33,14 @@
     </span>
     {{ end }}
     {{ end }}
+
+    {{ if .Site.Params.Views.enable }}
+	  <div class="views">
+	    <span class="views">
+	        <img src="https://visitor-badge.glitch.me/badge?page_id={{ .Permalink }}" alt="Views"/>
+	    </span>
+	  </div>
+    {{ end }}
     {{ if and (not (eq .Site.DisqusShortname "")) (not .Params.disable_comments) }}
     <span class="comments">
       <a href="{{ .Permalink }}#disqus_thread">{{with .Site.Data.l10n.articles.comments}}{{.}}{{end}}

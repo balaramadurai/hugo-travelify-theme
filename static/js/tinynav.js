@@ -1,12 +1,82 @@
-/* Theme front end features */
+/*! http://tinynav.viljamis.com v1.2 by @viljamis */
+(function ($, window, i) {
+  $.fn.tinyNav = function (options) {
 
-/* Mobile menu
-/*! http://tinynav.viljamis.com v1.1 by @viljamis */
+    // Default settings
+    var settings = $.extend({
+      'active' : 'selected', // String: Set the "active" class
+      'header' : '', // String: Specify text for "header" and show header instead of the active item
+      'indent' : '- ', // String: Specify text for indenting sub-items
+      'label'  : '' // String: sets the <label> text for the <select> (if not set, no label will be added)
+    }, options);
 
-!function(e,t,a){e.fn.tinyNav=function(n){var i=e.extend({active:"current-menu-item",header:!1},n);return this.each(function(){a++;var n=e(this),l="tinynav",r=l+a,o=".l_"+r,c=e("<select/>").addClass(l+" "+r);if(n.is("ul,ol")){var s="";n.addClass("l_"+r).find("a").each(function(){s+='<option value="'+e(this).attr("href")+'">';var t;for(t=0;t<e(this).parents("ul, ol").length-1;t++)s+="- ";s+=e(this).text()+"</option>"}),c.append(s),i.header||c.find(":eq("+e(o+" li").index(e(o+" li."+i.active))+")").attr("selected",!0),c.change(function(){t.location.href=e(this).val()}),e(o).after(c),i.label&&c.before(e("<label/>").attr("for",r).addClass(l+"_label "+r+"_label").append(i.label))}})}}(jQuery,this,0),jQuery(function(){jQuery("#main-nav .root").tinyNav({active:"current-menu-item"})});
+    return this.each(function () {
 
-/**
- * Animated back to top
- */
+      // Used for namespacing
+      i++;
 
-jQuery(document).ready(function(){jQuery(".back-to-top").hide();jQuery(function(){jQuery(window).scroll(function(){if(jQuery(this).scrollTop()>1e3){jQuery(".back-to-top").fadeIn()}else{jQuery(".back-to-top").fadeOut()}});jQuery(".back-to-top a").click(function(){jQuery("body,html,header").animate({scrollTop:0},1e3);return false})})})
+      var $nav = $(this),
+        // Namespacing
+        namespace = 'tinynav',
+        namespace_i = namespace + i,
+        l_namespace_i = '.l_' + namespace_i,
+        $select = $('<select/>').attr("id", namespace_i).addClass(namespace + ' ' + namespace_i);
+
+      if ($nav.is('ul,ol')) {
+
+        if (settings.header !== '') {
+          $select.append(
+            $('<option/>').text(settings.header)
+          );
+        }
+
+        // Build options
+        var options = '';
+
+        $nav
+          .addClass('l_' + namespace_i)
+          .find('a')
+          .each(function () {
+            options += '<option value="' + $(this).attr('href') + '">';
+            var j;
+            for (j = 0; j < $(this).parents('ul, ol').length - 1; j++) {
+              options += settings.indent;
+            }
+            options += $(this).text() + '</option>';
+          });
+
+        // Append options into a select
+        $select.append(options);
+
+        // Select the active item
+        if (!settings.header) {
+          $select
+            .find(':eq(' + $(l_namespace_i + ' li')
+            .index($(l_namespace_i + ' li.' + settings.active)) + ')')
+            .attr('selected', true);
+        }
+
+        // Change window location
+        $select.change(function () {
+          window.location.href = $(this).val();
+        });
+
+        // Inject select
+        $(l_namespace_i).after($select);
+
+        // Inject label
+        if (settings.label) {
+          $select.before(
+            $("<label/>")
+              .attr("for", namespace_i)
+              .addClass(namespace + '_label ' + namespace_i + '_label')
+              .append(settings.label)
+          );
+        }
+
+      }
+
+    });
+
+  };
+})(jQuery, this, 0);
