@@ -121,6 +121,9 @@ DisqusShortname = "example"
     series = "series"
     author = "author"
 
+[params.views]
+    enable = true  # visitor badge from https://visitor-badge.glitch.me/
+
 ## DONE - Menu
 ## DONE - slider 
 ## DONE - facebook like on homepage
