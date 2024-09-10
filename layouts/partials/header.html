@@ -12,7 +12,7 @@
     <link rel='stylesheet' id='travelify_style-css'  href="{{ $style.Permalink }}" type='text/css' media='all' />
     <link rel='stylesheet' id='embed_style-css'  href="{{ $embed_style.Permalink }}" type='text/css' media='all' />
     <link rel='stylesheet' id='google_font_ubuntu-css'  href="{{ $style.Permalink }}" type='text/css' media='all' />
-    <link rel="shortcut icon" href="{{ .Site.BaseURL }}/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.ico" type="image/x-icon">
     {{ if and (and (not (eq .Site.DisqusShortname "")) (not .Params.disable_comments)) }}
     <script id="dsq-count-scr" src="https://{{ .Site.Params.privacy.DisqusShortname }}.disqus.com/count.js" async></script>
     {{ end }}
