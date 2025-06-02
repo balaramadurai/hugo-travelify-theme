@@ -41,7 +41,7 @@
 	    </span>
 	  </div>
     {{ end }}
-    {{ if and (not (eq .Site.DisqusShortname "")) (not .Params.disable_comments) }}
+    {{ if and (not (eq .Site.Config.Services.Disqus.Shortname "")) (not .Params.disable_comments) }}
     <span class="comments">
       <a href="{{ .Permalink }}#disqus_thread">{{with .Site.Data.l10n.articles.comments}}{{.}}{{end}}
       </a>
