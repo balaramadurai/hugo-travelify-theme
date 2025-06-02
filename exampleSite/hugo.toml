@@ -1,4 +1,4 @@
-baseURL = "http://balaramadurai.github.io/"
+baseURL = "https://balaramadurai.github.io/"
 title = "Travelify"
 subtitle = "Travel theme for Hugo with Slider"
 languageCode = "en-us"
